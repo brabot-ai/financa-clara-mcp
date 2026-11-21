@@ -1,29 +1,18 @@
-# Welcome to your Lovable project
+# Finança Clara — Etapa 1 (demonstração educacional)
 
-This project was built with [Lovable](https://lovable.dev).
+Aplicação de chat do Bootcamp Bradesco/DIO baseada no guia “MCP sem complicação”. **DEMONSTRAÇÃO · DADOS FICTÍCIOS.**
 
-## Build with Lovable
+- **Não acessa APIs bancárias** (Plaid, Pluggy ou outras): nenhuma instituição está conectada.
+- **Não usa IA generativa** (OpenAI, Claude etc.) para interpretar dados: as respostas vêm de um motor de regras local e determinístico.
+- Sem banco de dados, sem segredos, sem localStorage/sessionStorage; o histórico fica só em memória durante a visita.
+- Somente leitura: não realiza Pix, pagamentos, transferências nem contratações.
+- Valores em USD (formato `US$ 110,00`), sem conversão para BRL. Referência: 25/09/2026.
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+## Estrutura
+- `src/data/fixture.json` — amostra sintética (4 contas, 22 transações).
+- `src/lib/finance/data-source.ts` — ponto único de acesso aos dados (trocável por uma camada de serviços).
+- `src/lib/finance/engine.ts` — cálculos (disponível, dívidas, filtros, categorias, padrões) e respostas.
+- `src/components/chat/` — interface do chat.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+## Testes
+`bunx vitest run` — cobre somas, sinais, pendentes, categoria, recorte combinado, conjunto vazio e recusa de operações de escrita.

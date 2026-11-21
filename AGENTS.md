@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Finance data is read only via `src/lib/finance/data-source.ts`; engine and UI never import the fixture directly — so a future service layer can replace it.
+- Chat replies are structured `Block[]` rendered as plain React text, never HTML — keeps user/content rendering safe.
