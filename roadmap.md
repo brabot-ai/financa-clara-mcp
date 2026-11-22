@@ -1,6 +1,7 @@
 # Entrega final — documentação
 
-- [ ] Completar README com escopo, arquitetura, especificação, evolução e configuração externa dos MCPs.
-- [ ] Conferir caminhos, segredos na árvore e no histórico disponível, testes e compilação automática.
-- [ ] Registrar evidências e pendências sem alterar a aplicação.
-- [ ] Salvar alterações em commit para a sincronização configurada no Lovable.
+- [x] Completar README com escopo, arquitetura, especificação, evolução e configuração externa dos MCPs.
+- [x] Conferir caminhos, segredos na árvore e no histórico disponível, testes e compilação automática.
+- [x] Registrar evidências e pendências sem alterar a aplicação.
+- [x] Preparar alterações documentais para o commit de entrega.
+- [ ] Confirmar recebimento no GitHub — depende da conferência do participante no painel Git; estado remoto indisponível ao agente.
